@@ -63,5 +63,18 @@ insert into Producct values('Sting','Average','2023-10-27','120')
 insert into Producct values('Coke','Good','2023-11-20','100')
 
 
-Select *from Customer
+/*Aggregate function*/
+
+Select *from Customer where Cus_address in ('Malir','Johar ')
+Select *from Customer where Cus_address not in ('Malir','Johar ')
+Select *from Customer where Cus_address like '%r'
+Select *from Customer where Cus_address like 'A%'
+Select *from Customer where Cus_address like '%a%'
+select *from parents
+select status from parents   group by status
 select *from Producct
+select Sum(Cast(Pro_price as money))   from Producct 
+select   Pro_quality ,Sum(Cast(Pro_price as money)) As Total  from Producct 
+
+group by Pro_quality
+
