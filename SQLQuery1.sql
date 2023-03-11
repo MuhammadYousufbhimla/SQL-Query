@@ -60,7 +60,7 @@ Pro_quality varchar (10),
 
 insert into Producct values('Pakola','Below','2023-11-15','140')
 insert into Producct values('Sting','Average','2023-10-27','120')
-insert into Producct values('Coke','Good','2023-11-20','100')
+insert into Producct values('Neon','Good','2023-11-20','100')
 
 
 /*Aggregate function*/
@@ -80,3 +80,16 @@ group by Pro_quality
 select min(Pro_price) from Producct 
 select max(Pro_price) from Producct 
 select HAVING SUM(CAST(Pro_price AS smallmoney)) from Producct 
+
+
+/*Now create View*/
+
+CREATE VIEW [Product_Customer] AS
+SELECT Cus_name, Cus_role
+FROM Customer
+WHERE Cus_role = 'Developer';
+Select *from Product_Customer
+select GETDATE() as date,0,1,1
+select *from Customer
+select *from Producct 
+select *from Customer  c where c.Cus_id  in(Select p.Pro_id from Producct p   where p.Pro_id=6)
