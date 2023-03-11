@@ -75,6 +75,8 @@ select status from parents   group by status
 select *from Producct
 select Sum(Cast(Pro_price as money))   from Producct 
 select   Pro_quality ,Sum(Cast(Pro_price as money)) As Total  from Producct 
-
 group by Pro_quality
 
+select min(Pro_price) from Producct 
+select max(Pro_price) from Producct 
+select HAVING SUM(CAST(Pro_price AS smallmoney)) from Producct 
