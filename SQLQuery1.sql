@@ -93,3 +93,7 @@ select GETDATE() as date,0,1,1
 select *from Customer
 select *from Producct 
 select *from Customer  c where c.Cus_id  in(Select p.Pro_id from Producct p   where p.Pro_id=6)
+select *from Customer  c where c.Cus_id  not in(Select p.Pro_id from Producct p   where p.Pro_id=1)
+
+select *from Customer  c where exists  (Select *from Producct p   where p.Pro_id=6 and p.Pro_id=c.Cus_id)
+select *from Customer  c where not exists  (Select *from Producct p   where p.Pro_id=6 and p.Pro_id=c.Cus_id)
