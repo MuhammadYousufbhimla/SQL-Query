@@ -43,9 +43,25 @@ Cus_id bigint IDENTITY(1,1) PRIMARY KEY,
   Cus_phone varchar(20)
 
 );
-
 insert into Customer values('Ahmed','Testre','Al -Asif','0321-8563142')
 insert into Customer values('Mesum','Backend','Defence','0321-8563142')
 insert into Customer values('Noman','Programmer','Johar ','0321-8563142')
+/* New customer table from script*/
+
+Create table Producct 
+(
+Pro_id bigint IDENTITY(1,1) PRIMARY KEY,
+Pro_name varchar (20),
+Pro_quality varchar (10),
+  Pro_expiry Date,
+  Pro_price varchar(20)
+
+);
+
+insert into Producct values('Pakola','Below','2023-11-15','140')
+insert into Producct values('Sting','Average','2023-10-27','120')
+insert into Producct values('Coke','Good','2023-11-20','100')
+
 
 Select *from Customer
+select *from Producct
