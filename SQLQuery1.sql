@@ -94,6 +94,18 @@ select *from Customer
 select *from Producct 
 select *from Customer  c where c.Cus_id  in(Select p.Pro_id from Producct p   where p.Pro_id=6)
 select *from Customer  c where c.Cus_id  not in(Select p.Pro_id from Producct p   where p.Pro_id=1)
-
 select *from Customer  c where exists  (Select *from Producct p   where p.Pro_id=6 and p.Pro_id=c.Cus_id)
 select *from Customer  c where not exists  (Select *from Producct p   where p.Pro_id=6 and p.Pro_id=c.Cus_id)
+
+
+if  exists (Select *from Customer c where c.Cus_id=7 )
+
+begin
+print('Record is Exists');
+	select 'Record exists' as Result;
+end
+else
+begin 
+print('Record is not  Exists');
+	select 'Record not exists' as Result;
+end
