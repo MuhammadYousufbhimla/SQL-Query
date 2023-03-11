@@ -109,3 +109,14 @@ begin
 print('Record is not  Exists');
 	select 'Record not exists' as Result;
 end
+
+
+/*Temporay table */
+
+Create table #tempo
+(
+id int primary key,
+name varchar(50)
+);
+
+Select *from #tempo
