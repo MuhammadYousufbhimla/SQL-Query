@@ -44,6 +44,6 @@ Begin
 End
 
 	
-Select dbo.addno(23,34)
+Select dbo.addno(23,34) AS Result
 
-select dbo.Addtwonumber(5,5)
+select dbo.Addtwonumber(5,5) as Result
