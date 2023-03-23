@@ -19,6 +19,8 @@ order by p.id
 
 select *from parents
 select *from Customer
+select *from parents
+select *from Customer
 
 
 --Right join only Right table field show whether left table same id else null
